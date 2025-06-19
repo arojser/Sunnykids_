@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sunny Kids - Actividades Infantiles</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; color: #333; }
+  header { text-align: center; margin-bottom: 20px; }
+  #logo { width: 150px; }
+  nav button {
+    margin: 5px; padding: 10px 20px; cursor: pointer; background: #ff6f61;
+    border: none; color: white; border-radius: 5px; font-weight: bold;
+  }
+  nav button:hover { background: #ff4a3d; }
+  section {
+    margin-bottom: 30px; background: white; padding: 15px; border-radius: 8px;
+    box-shadow: 0 0 10px #ddd;
+  }
+  h1, h2, h3 { color: #ff6f61; }
+  a { color: #ff6f61; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .hidden { display: none; }
+  label { display: block; margin-top: 10px; font-weight: bold; }
+  input, textarea, select {
+    width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc;
+    border-radius: 4px; box-sizing: border-box;
+  }
+  button.submit-btn {
+    background: #28a745; color: white; border: none; padding: 10px 20px;
+    margin-top: 15px; border-radius: 5px; cursor: pointer; font-weight: bold;
+  }
+  button.submit-btn:hover { background: #218838; }
+  .social-buttons a {
+    margin-right: 10px; display: inline-block; padding: 10px 15px;
+    background: #555; color: white; border-radius: 5px; text-decoration: none;
+    font-weight: bold;
+  }
+  .social-buttons a:hover { background: #333; }
+</style>
+<script>
+function mostrarIdioma(lang) {
+  const idiomas = ['es', 'en', 'fr'];
+  idiomas.forEach(idioma => {
+    document.querySelectorAll('.' + idioma).forEach(el => {
+      el.classList.add('hidden');
+    });
+  });
+  document.querySelectorAll('.' + lang).forEach(el => {
+    el.classList.remove('hidden');
+  });
+}
+window.onload = () => {
+  mostrarIdioma('es'); // Por defecto en español
+};
+</script>
+</head>
+<body>
+
+<header>
+  <img id="logo" src="logo.png" alt="Sunny Kids Logo" />
+  <h1 class="es">Bienvenidos a Sunny Kids</h1>
+  <h1 class="en hidden">Welcome to Sunny Kids</h1>
+  <h1 class="fr hidden">Bienvenue chez Sunny Kids</h1>
+  <p class="es">La mejor web para actividades divertidas para los pequeños de casa.</p>
+  <p class="en hidden">The best website for fun activities for your little ones.</p>
+  <p class="fr hidden">Le meilleur site pour des activités amusantes pour vos petits.</p>
+  <nav>
+    <button onclick="mostrarIdioma('es')">Español</button>
+    <button onclick="mostrarIdioma('en')">English</button>
+    <button onclick="mostrarIdioma('fr')">Français</button>
+  </nav>
+</header>
+
+<!-- Contactos -->
+<section class="es">
+  <h2>Contactos</h2>
+  <p><strong>Alma</strong> - Teléfono: 611 38 49 85 - Email: <a href="mailto:arojser3005@gmail.com">arojser3005@gmail.com</a></p>
+  <p><strong>Leyre</strong> - Teléfono: 722 80 09 94 - Email: <a href="mailto:leyreprincess13@gmail.com">leyreprincess13@gmail.com</a></p>
+</section>
+<section class="en hidden">
+  <h2>Contacts</h2>
+  <p><strong>Alma</strong> - Phone: 611 38 49 85 - Email: <a href="mailto:arojser3005@gmail.com">arojser3005@gmail.com</a></p>
+  <p><strong>Leyre</strong> - Phone: 722 80 09 94 - Email: <a href="mailto:leyreprincess13@gmail.com">leyreprincess13@gmail.com</a></p>
+</section>
+<section class="fr hidden">
+  <h2>Contacts</h2>
+  <p><strong>Alma</strong> - Téléphone : 611 38 49 85 - Email : <a href="mailto:arojser3005@gmail.com">arojser3005@gmail.com</a></p>
+  <p><strong>Leyre</strong> - Téléphone : 722 80 09 94 - Email : <a href="mailto:leyreprincess13@gmail.com">leyreprincess13@gmail.com</a></p>
+</section>
+
+<!-- Actividades -->
+<section class="es">
+  <h2>Actividades</h2>
+  <p><em>Nuestra aventura durante estos 3 días comienza aquí. Los horarios no son fijos, se pueden cambiar consultando con nosotras.</em></p>
+  <h3>Día 1</h3>
+  <ul>
+    <li><strong>Pintando con burbujas</strong> - 5:45 PM (aprox. 1 hora)<br>Pintar con burbujas usando pintura para crear obras artísticas. Vídeo y más info en la web.</li>
+    <li><strong>Botella de la calma</strong> - Actividad para calmar nervios con botellas decoradas con purpurina y estrellas.</li>
+  </ul>
+  <p>Precio día 1: 2 euros (rebajado si compras los 3 días completos).</p>
+
+  <h3>Día 2</h3>
+  <ul>
+    <li><strong>Plantando lentejas</strong> - 12:00 PM (40 minutos)<br>Semillas en algodón o tierra para cuidar y ver crecer plantas.</li>
+    <li><strong>Personalizo mi mochila</strong> - 5:00 PM (1 hora)<br>Decoración creativa con materiales varios.</li>
+    <li><strong>Abanicos con forma</strong> - Crear abanicos personalizados para combatir el calor.</li>
+  </ul>
+
+  <h3>Día 3</h3>
+  <ul>
+    <li><strong>Sales de colores</strong> - 11:30 AM (30 minutos)<br>Colorear sales para baño divertido.</li>
+    <li><strong>Regalo para papá y mamá</strong> - 12:05 PM (35 minutos)<br>Un regalo especial para padres al final de la temporada.</li>
+    <li><strong>Final de temporada</strong> - Entrega de premios, diplomas y música para celebrar.</li>
+  </ul>
+</section>
+<section class="en hidden">
+  <h2>Activities</h2>
+  <p><em>Our adventure over these 3 days begins here. Timings are flexible and can be changed upon request.</em></p>
+  <h3>Day 1</h3>
+  <ul>
+    <li><strong>Painting with bubbles</strong> - 5:45 PM (about 1 hour)<br>Use bubbles dipped in paint to create artistic designs.</li>
+    <li><strong>Calm bottle</strong> - Activity to calm nerves with decorated bottles.</li>
+  </ul>
+  <p>Day 1 price: 2 euros (discounted if you buy all 3 days).</p>
+  <h3>Day 2</h3>
+  <ul>
+    <li><strong>Planting lentils</strong> - 12:00 PM (40 minutes)<br>Seeds in cotton or soil to care for growing plants.</li>
+    <li><strong>Customize my backpack</strong> - 5:00 PM (1 hour)<br>Creative decoration with various materials.</li>
+    <li><strong>Shaped fans</strong> - Create personalized fans to beat the heat.</li>
+  </ul>
+  <h3>Day 3</h3>
+  <ul>
+    <li><strong>Colored salts</strong> - 11:30 AM (30 minutes)<br>Color salts for fun baths.</li>
+    <li><strong>Gift for mom and dad</strong> - 12:05 PM (35 minutes)<br>A special gift for parents at season end.</li>
+    <li><strong>Season finale</strong> - Award ceremony, diplomas, and music celebration.</li>
+  </ul>
+</section>
+<section class="fr hidden">
+  <h2>Activités</h2>
+  <p><em>Notre aventure pendant ces 3 jours commence ici. Les horaires ne sont pas fixes et peuvent être modifiés sur demande.</em></p>
+  <h3>Jour 1</h3>
+  <ul>
+    <li><strong>Peindre avec des bulles</strong> - 17h45 (environ 1 heure)<br>Utiliser des bulles trempées dans la peinture pour créer des dessins artistiques.</li>
+    <li><strong>Bouteille calme</strong> - Activité pour calmer les nerfs avec des bouteilles décorées.</li>
+  </ul>
+  <p>Prix jour 1 : 2 euros (réduit si vous achetez les 3 jours).</p>
+  <h3>Jour 2</h3>
+  <ul>
+    <li><strong>Planter des lentilles</strong> - 12h00 (40 minutes)<br>Des graines dans du coton ou de la terre pour prendre soin des plantes.</li>
+    <li><strong>Personnaliser mon sac à dos</strong> - 17h00 (1 heure)<br>Décoration créative avec divers matériaux.</li>
+    <li><strong>Éventails personnalisés</strong> - Créer des éventails personnalisés pour lutter contre la chaleur.</li>
+  </ul>
+  <h3>Jour 3</h3>
+  <ul>
+    <li><strong>Sels colorés</strong> - 11h30 (30 minutes)<br>Colorer des sels pour un bain amusant.</li>
+    <li><strong>Cadeau pour papa et maman</strong> - 12h05 (35 minutes)<br>Un cadeau spécial pour les parents à la fin de la saison.</li>
+    <li><strong>Finale de saison</strong> - Remise des prix, diplômes et fête musicale.</li>
+  </ul>
+</section>
+
+<!-- Formulario inscripción -->
+<section class="es">
+  <h2>Formulario de inscripción a actividades</h2>
+  <form id="inscripcion" onsubmit="return false;">
+    <label for="nombreHijo">Nombre del niño/a:</label>
+    <input type="text" id="nombreHijo" name="nombreHijo" required />
+
+    <label for="gmailMadre">Email de la madre:</label>
+    <input type="email" id="gmailMadre" name="gmailMadre" required />
+
+    <label for="alergias">Alergias o necesidades especiales:</label>
+    <textarea id="alergias" name="alergias" rows="3" placeholder="Escribe aquí..."></textarea>
+
+    <label for="actividad">Actividad a la que te apuntas:</label>
+    <select id="actividad" name="actividad" required>
+      <option value="" disabled selected>Selecciona una actividad</option>
+      <option value="pintando">Pintando con burbujas</option>
+      <option value="botellaCalma">Botella de la calma</option>
+      <option value="plantando">Plantando lentejas</option>
+      <option value="mochila">Personalizo mi mochila</option>
+      <option value="abanicos">Abanicos con forma</option>
+      <option value="sales">Sales de colores</option>
+      <option value="regalo">Regalo para papá y mamá</option>
+      <option value="finalTemporada">Final de temporada</option>
+    </select>
+
+    <label for="mensaje">Mensaje al apuntarte:</label>
+    <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribe aquí..."></textarea>
+
+    <button class="submit-btn" onclick="alert('¡Inscripción enviada! Gracias por apuntarte.')">Enviar inscripción</button>
+  </form>
+</section>
+<section class="en hidden">
+  <h2>Activity Registration Form</h2>
+  <form id="inscripcion-en" onsubmit="return false;">
+    <label for="nombreHijo-en">Child's Name:</label>
+    <input type="text" id="nombreHijo-en" name="nombreHijo-en" required />
+
+    <label for="gmailMadre-en">Mother's Email:</label>
+    <input type="email" id="gmailMadre-en" name="gmailMadre-en" required />
+
+    <label for="alergias-en">Allergies or special needs:</label>
+    <textarea id="alergias-en" name="alergias-en" rows="3" placeholder="Write here..."></textarea>
+
+    <label for="actividad-en">Activity you want to join:</label>
+    <select id="actividad-en" name="actividad-en" required>
+      <option value="" disabled selected>Select an activity</option>
+      <option value="painting">Painting with bubbles</option>
+      <option value="calmBottle">Calm bottle</option>
+      <option value="planting">Planting lentils</option>
+      <option value="backpack">Customize my backpack</option>
+      <option value="fans">Shaped fans</option>
+      <option value="coloredSalts">Colored salts</option>
+      <option value="gift">Gift for mom and dad</option>
+      <option value="seasonFinale">Season finale</option>
+    </select>
+
+    <label for="mensaje-en">Message when signing up:</label>
+    <textarea id="mensaje-en" name="mensaje-en" rows="3" placeholder="Write here..."></textarea>
+
+    <button class="submit-btn" onclick="alert('Registration sent! Thanks for signing up.')">Send registration</button>
+  </form>
+</section>
+<section class="fr hidden">
+  <h2>Formulaire d'inscription aux activités</h2>
+  <form id="inscripcion-fr" onsubmit="return false;">
+    <label for="nombreHijo-fr">Nom de l'enfant :</label>
+    <input type="text" id="nombreHijo-fr" name="nombreHijo-fr" required />
+
+    <label for="gmailMadre-fr">Email de la mère :</label>
+    <input type="email" id="gmailMadre-fr" name="gmailMadre-fr" required />
+
+    <label for="alergias-fr">Allergies ou besoins spéciaux :</label>
+    <textarea id="alergias-fr" name="alergias-fr" rows="3" placeholder="Écrivez ici..."></textarea>
+
+    <label for="actividad-fr">Activité à laquelle vous vous inscrivez :</label>
+    <select id="actividad-fr" name="actividad-fr" required>
+      <option value="" disabled selected>Sélectionnez une activité</option>
+      <option value="peinture">Peindre avec des bulles</option>
+      <option value="bouteilleCalme">Bouteille calme</option>
+      <option value="plantation">Planter des lentilles</option>
+      <option value="sac">Personnaliser mon sac à dos</option>
+      <option value="eventails">Éventails personnalisés</option>
+      <option value="sels">Sels colorés</option>
+      <option value="cadeau">Cadeau pour papa et maman</option>
+      <option value="finale">Finale de saison</option>
+    </select>
+
+    <label for="mensaje-fr">Message lors de l'inscription :</label>
+    <textarea id="mensaje-fr" name="mensaje-fr" rows="3" placeholder="Écrivez ici..."></textarea>
+
+    <button class="submit-btn" onclick="alert('Inscription envoyée ! Merci pour votre participation.')">Envoyer l'inscription</button>
+  </form>
+</section>
+
+<!-- Solicitud cambio horario -->
+<section class="es">
+  <h2>Solicitud para cambiar horas</h2>
+  <form id="cambioHoras" onsubmit="return false;">
+    <label for="nombreSolicitante">Nombre del solicitante:</label>
+    <input type="text" id="nombreSolicitante" name="nombreSolicitante" required />
+
+    <label for="correoSolicitante">Correo electrónico:</label>
+    <input type="email" id="correoSolicitante" name="correoSolicitante" required />
+
+    <label for="actividadCambio">Actividad para cambiar horario:</label>
+    <select id="actividadCambio" name="actividadCambio" required>
+      <option value="" disabled selected>Selecciona una actividad</option>
+      <option value="pintando">Pintando con burbujas</option>
+      <option value="botellaCalma">Botella de la calma</option>
+      <option value="plantando">Plantando lentejas</option>
+      <option value="mochila">Personalizo mi mochila</option>
+      <option value="abanicos">Abanicos con forma</option>
+      <option value="sales">Sales de colores</option>
+      <option value="regalo">Regalo para papá y mamá</option>
+      <option value="finalTemporada">Final de temporada</option>
+    </select>
+
+    <label for="mensajeCambio">Motivo del cambio / mensaje:</label>
+    <textarea id="mensajeCambio" name="mensajeCambio" rows="3" placeholder="Escribe aquí..."></textarea>
+
+    <button class="submit-btn" onclick="alert('Solicitud enviada. Nos pondremos en contacto contigo pronto.')">Enviar solicitud</button>
+  </form>
+</section>
+<section class="en hidden">
+  <h2>Request to change schedule</h2>
+  <form id="cambioHoras-en" onsubmit="return false;">
+    <label for="nombreSolicitante-en">Applicant's name:</label>
+    <input type="text" id="nombreSolicitante-en" name="nombreSolicitante-en" required />
+
+    <label for="correoSolicitante-en">Email:</label>
+    <input type="email" id="correoSolicitante-en" name="correoSolicitante-en" required />
+
+    <label for="actividadCambio-en">Activity to change schedule:</label>
+    <select id="actividadCambio-en" name="actividadCambio-en" required>
+      <option value="" disabled selected>Select an activity</option>
+      <option value="painting">Painting with bubbles</option>
+      <option value="calmBottle">Calm bottle</option>
+      <option value="planting">Planting lentils</option>
+      <option value="backpack">Customize my backpack</option>
+      <option value="fans">Shaped fans</option>
+      <option value="coloredSalts">Colored salts</option>
+      <option value="gift">Gift for mom and dad</option>
+      <option value="seasonFinale">Season finale</option>
+    </select>
+
+    <label for="mensajeCambio-en">Reason for change / message:</label>
+    <textarea id="mensajeCambio-en" name="mensajeCambio-en" rows="3" placeholder="Write here..."></textarea>
+
+    <button class="submit-btn" onclick="alert('Request sent. We will contact you soon.')">Send request</button>
+  </form>
+</section>
+<section class="fr hidden">
+  <h2>Demande de changement d'horaire</h2>
+  <form id="cambioHoras-fr" onsubmit="return false;">
+    <label for="nombreSolicitante-fr">Nom du demandeur :</label>
+    <input type="text" id="nombreSolicitante-fr" name="nombreSolicitante-fr" required />
+
+    <label for="correoSolicitante-fr">Email :</label>
+    <input type="email" id="correoSolicitante-fr" name="correoSolicitante-fr" required />
+
+    <label for="actividadCambio-fr">Activité pour changer d'horaire :</label>
+    <select id="actividadCambio-fr" name="actividadCambio-fr" required>
+      <option value="" disabled selected>Sélectionnez une activité</option>
+      <option value="peinture">Peindre avec des bulles</option>
+      <option value="bouteilleCalme">Bouteille calme</option>
+      <option value="plantation">Planter des lentilles</option>
+      <option value="sac">Personnaliser mon sac à dos</option>
+      <option value="eventails">Éventails personnalisés</option>
+      <option value="sels">Sels colorés</option>
+      <option value="cadeau">Cadeau pour papa et maman</option>
+      <option value="finale">Finale de saison</option>
+    </select>
+
+    <label for="mensajeCambio-fr">Motif du changement / message :</label>
+    <textarea id="mensajeCambio-fr" name="mensajeCambio-fr" rows="3" placeholder="Écrivez ici..."></textarea>
+
+    <button class="submit-btn" onclick="alert('Demande envoyée. Nous vous contacterons bientôt.')">Envoyer la demande</button>
+  </form>
+</section>
+
+<!-- Hoja de reclamaciones -->
+<section class="es">
+  <h2>Hoja de reclamaciones</h2>
+  <p>Si tienes alguna reclamación, por favor escríbela aquí:</p>
+  <textarea rows="5" placeholder="Escribe tu reclamación..."></textarea>
+  <br />
+  <button class="submit-btn" onclick="alert('Reclamación enviada. Gracias por avisarnos.')">Enviar reclamación</button>
+</section>
+<section class="en hidden">
+  <h2>Complaint form</h2>
+  <p>If you have any complaint, please write it here:</p>
+  <textarea rows="5" placeholder="Write your complaint..."></textarea>
+  <br />
+  <button class="submit-btn" onclick="alert('Complaint sent. Thanks for letting us know.')">Send complaint</button>
+</section>
+<section class="fr hidden">
+  <h2>Formulaire de réclamation</h2>
+  <p>Si vous avez une réclamation, veuillez l'écrire ici :</p>
+  <textarea rows="5" placeholder="Écrivez votre réclamation..."></textarea>
+  <br />
+  <button class="submit-btn" onclick="alert('Réclamation envoyée. Merci de nous avoir informés.')">Envoyer la réclamation</button>
+</section>
+
+<!-- Redes Sociales -->
+<section>
+  <h2 class="es">Nuestras redes sociales</h2>
+  <h2 class="en hidden">Our social networks</h2>
+  <h2 class="fr hidden">Nos réseaux sociaux</h2>
+  <div class="social-buttons">
+    <a href="https://www.instagram.com/sunny.kids.ofc" target="_blank" rel="noopener noreferrer">Instagram @sunny.kids.ofc</a>
+    <a href="https://www.tiktok.com/@sunny.kids.ofc" target="_blank" rel="noopener noreferrer">TikTok @sunny.kids.ofc</a>
+  </div>
+</section>
+
+</body>
+</html>
